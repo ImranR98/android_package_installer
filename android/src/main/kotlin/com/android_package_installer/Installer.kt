@@ -68,6 +68,9 @@ internal class Installer(private val context: Context, private var activity: Act
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 params.setPackageSource(PackageInstaller.PACKAGE_SOURCE_STORE)
             }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                params.setRequestUpdateOwnership(true)
+            }
             sessionId = packageInstaller.createSession(params)
             session = packageInstaller.openSession(sessionId)
         } catch (e: Exception) {
