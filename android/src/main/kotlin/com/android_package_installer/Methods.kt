@@ -8,7 +8,11 @@ internal class MethodCallHandler(private val installer: Installer) : MethodChann
     companion object {
         lateinit var callResult: MethodChannel.Result
         fun resultSuccess(data: Any) {
-            callResult.success(data)
+            try {
+                callResult.success(data)
+            } catch (_: IllegalStateException) {
+                // Reply already submitted from a previous session commit intent
+            }
         }
 
         fun nothing() {
