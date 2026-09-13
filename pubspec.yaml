@@ -6,8 +6,8 @@ repository: https://github.com/playbott/android_package_installer
 
 
 environment:
-  sdk: ^3.6.0
-  flutter: '>=3.3.0'
+  sdk: ^3.12.0
+  flutter: '>=3.44.0'
 
 dependencies:
   flutter:
@@ -26,7 +26,7 @@ dev_dependencies:
 flutter:
   # This section identifies this Flutter project as a plugin project.
   # The 'pluginClass' specifies the class (in Java, Kotlin, Swift, Objective-C, etc.)
-  # which should be registered in the plugin registry. This is required for
+  # which should be registered in the plugin registry.  This is required for
   # using method channels.
   # The Android 'package' specifies package in which the registered class is.
   # This is required for using method channels on Android.
